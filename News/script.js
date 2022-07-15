@@ -1,5 +1,5 @@
 // Slider
-let sliderImages = ['../src/slider imgae 1.jpg', '../src/slider imgae 2.jpg'];
+let sliderImages = ['../src/slider imgae 1.jpg', '../src/slider imgae 2.jpg', '../src/slider imgae 3.jpg'];
 let sliderSelector = 0;
 
 let sliderContent = document.getElementById('sliderContent');
