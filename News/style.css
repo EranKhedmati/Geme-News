@@ -19,6 +19,8 @@ body {
     margin: auto;
 }
 
+/* Header start ---------------------------------------------------------------------------------- */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -66,14 +68,57 @@ header input {
     background-color: #aa1b2a;
 }
 
+/* Header end----------------------------------------------------------------------------- */
 
-/* Media query */
+/* Slider start---------------------------------------------------------------------------- */
+
+.slider {
+    width: 80%;
+    margin: 50px auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nextSlider,
+.perviousSlider {
+    width: 7%;
+    min-width: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider button{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: #333;
+    color: #fff;
+}
+
+.slider button:hover{
+    background-color: #666;
+}
+
+.slider >img{
+    position: absolute;
+    z-index: -1;
+    width: 80%;
+    border-radius: 10px;
+}
+
+/* Slider end ----------------------------------------------------------------------------- */
+
+/* Media query start --------------------------------------------------------------------------*/
 
 @media (max-width:900px) {
     header {
         flex-direction: column;
     }
-
+    
     header>div:first-child {
         justify-content: space-between;
     }
@@ -88,12 +133,17 @@ header input {
         justify-content: space-between;
         margin-top: 10px;
     }
+    .slider button{
+        width: 20PX;
+        height: 20px;
+    }
 }
 
 @media (max-width:470px) {
-    header>div:first-child{
+    header>div:first-child {
         flex-direction: column;
         align-items: center;
     }
-
 }
+
+/* Media query end-------------------------------------------------------------------------- */
