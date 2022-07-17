@@ -1,36 +1,44 @@
 // Slider
-let sliderImages = ['../src/slider imgae 1.jpg', '../src/slider imgae 2.jpg', '../src/slider imgae 3.jpg'];
+let sliderImg = document.getElementById('sliderImg');
+
+// Get images 
+let sliderImages = ["../src/slider\ imgae\ 1.jpg", "../src/slider\ imgae\ 2.jpg", "../src/slider\ imgae\ 3.jpg"];
 let sliderSelector = 0;
 
-let sliderContent = document.getElementById('sliderContent');
+// Go next & pervious
+let nextSliderBtn = document.getElementById('nextSlide');
 
-let perviousSlider = document.getElementById('perviousSlider');
-let nextSlider = document.getElementById('nextSlider');
+let perviousSliderBtn = document.getElementById('perviousSlide');
 
-nextSlider.addEventListener('click', () => {
-    sliderSelector++;
-    if (sliderSelector > sliderImages.length - 1) {
-        sliderSelector = 0;
-    }
-    sliderContent.src = sliderImages[sliderSelector];
-})
+nextSliderBtn.addEventListener('click', nextSlide)
 
-perviousSlider.addEventListener('click', () => {
+perviousSliderBtn.addEventListener('click', () => {
     sliderSelector--;
     if (sliderSelector < 0) {
         sliderSelector = sliderImages.length - 1;
     }
-    sliderContent.src = sliderImages[sliderSelector];
+    sliderImg.src = sliderImages[sliderSelector];
 })
 
-function autoChangeSlider() {
+// Set auto chagne
+
+function nextSlide() {
     sliderSelector++;
     if (sliderSelector > sliderImages.length - 1) {
         sliderSelector = 0;
     }
-    sliderContent.src = sliderImages[sliderSelector];
+    sliderImg.src = sliderImages[sliderSelector];
 }
 
-// const setChangeSlider = setInterval(autoChangeSlider, 3000);
+let setAutoSlider = setInterval(nextSlide, 4000);
 
-sliderContent.src = sliderImages[sliderSelector];
+// Stop when hover of slider
+
+let slider = document.querySelector('.slider');
+slider.addEventListener('mouseover', () => {
+    clearInterval(setAutoSlider)
+})
+
+slider.addEventListener('mouseout',()=>{
+    setAutoSlider = setInterval(nextSlide,4000)
+})

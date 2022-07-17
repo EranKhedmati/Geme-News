@@ -72,42 +72,41 @@ header input {
 
 /* Slider start---------------------------------------------------------------------------- */
 
-.slider {
+.slider{
     width: 80%;
-    margin: 50px auto;
-    border-radius: 10px;
+    margin: auto;
+}
+
+.slider img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.slider>div{
+    width: 100%;
     display: flex;
     justify-content: space-between;
-}
-
-.nextSlider,
-.perviousSlider {
-    width: 7%;
-    min-width: 50px;
-    height: 100%;
-    display: flex;
     align-items: center;
-    justify-content: center;
+    padding: 10px;
+    background: #333;
+    border-radius: 20px;
 }
 
-.slider button{
-    width: 30px;
-    height: 30px;
+.slider button {
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
+    background: #fff;
+    color: #333;
+    cursor: pointer;
     border: none;
-    background-color: #333;
-    color: #fff;
+    transition: all 250ms;
 }
 
 .slider button:hover{
-    background-color: #666;
-}
-
-.slider >img{
-    position: absolute;
-    z-index: -1;
-    width: 80%;
-    border-radius: 10px;
+    width: 45px;
+    height: 45px;
+    color: #000;
 }
 
 /* Slider end ----------------------------------------------------------------------------- */
@@ -116,7 +115,7 @@ header input {
 
 .card{
     width: 80%;
-    margin: 400px auto auto auto;
+    margin: 10px auto;
     border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
@@ -128,6 +127,7 @@ header input {
     width: 250px;
     height: 200px;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 /* Section news end--------------------------------------------------------------------------- */
@@ -152,10 +152,6 @@ header input {
         display: flex;
         justify-content: space-between;
         margin-top: 10px;
-    }
-    .slider button{
-        width: 20PX;
-        height: 20px;
     }
 }
 
