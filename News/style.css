@@ -112,6 +112,26 @@ header input {
 
 /* Slider end ----------------------------------------------------------------------------- */
 
+/* Section news start--------------------------------------------------------------------------- */
+
+.card{
+    width: 80%;
+    margin: 400px auto auto auto;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card>img{
+    border-radius: 10px;
+    width: 250px;
+    height: 200px;
+    margin-top: 20px;
+}
+
+/* Section news end--------------------------------------------------------------------------- */
+
 /* Media query start --------------------------------------------------------------------------*/
 
 @media (max-width:900px) {
