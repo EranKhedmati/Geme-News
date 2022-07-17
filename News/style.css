@@ -19,6 +19,17 @@ body {
     margin: auto;
 }
 
+body::-webkit-scrollbar {
+    width: 10px;
+  }
+  body::-webkit-scrollbar-track {
+    background: #999;
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 20px;
+  }
+
 /* Header start ---------------------------------------------------------------------------------- */
 
 header {
