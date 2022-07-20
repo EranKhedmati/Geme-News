@@ -21,14 +21,16 @@ body {
 
 body::-webkit-scrollbar {
     width: 10px;
-  }
-  body::-webkit-scrollbar-track {
+}
+
+body::-webkit-scrollbar-track {
     background: #999;
-  }
-  body::-webkit-scrollbar-thumb {
+}
+
+body::-webkit-scrollbar-thumb {
     background-color: #333;
     border-radius: 20px;
-  }
+}
 
 /* Header start ---------------------------------------------------------------------------------- */
 
@@ -83,17 +85,17 @@ header input {
 
 /* Slider start---------------------------------------------------------------------------- */
 
-.slider{
+.slider {
     width: 80%;
     margin: auto;
 }
 
-.slider img{
+.slider img {
     width: 100%;
     border-radius: 20px;
 }
 
-.slider>div{
+.slider>div {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -114,7 +116,7 @@ header input {
     transition: all 250ms;
 }
 
-.slider button:hover{
+.slider button:hover {
     width: 45px;
     height: 45px;
     color: #000;
@@ -122,9 +124,9 @@ header input {
 
 /* Slider end ----------------------------------------------------------------------------- */
 
-/* Section news start--------------------------------------------------------------------------- */
+/* Section card start--------------------------------------------------------------------------- */
 
-.card{
+.card {
     width: 80%;
     margin: 10px auto;
     border-radius: 10px;
@@ -133,13 +135,64 @@ header input {
     justify-content: space-around;
 }
 
-.card>img{
+.card>img {
     border-radius: 10px;
     width: 250px;
     height: 200px;
     margin-top: 20px;
     cursor: pointer;
 }
+
+/* Section card end--------------------------------------------------------------------------- */
+
+/* Section news sart--------------------------------------------------------------------------- */
+
+.news {
+    display: flex;
+    margin: 10px auto;
+    /* background-color: #333; */
+    width: 80%;
+}
+
+.last-news {
+    width: 60%;
+    /* background: aqua; */
+}
+
+.last-news h3 {
+    color: red;
+    margin-top: 10px;
+}
+
+.news-section-last {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px #333 solid;
+    padding: 5px;
+}
+
+.news-section-last h5:first-child{
+    color: red;
+}
+
+.news-section-last >div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.news-section-last >div>div{
+    display: flex;
+    gap: 5px;
+}
+
+.news-section-last img{
+    width: 150px;
+    border-radius: 5px;
+}
+
+
 
 /* Section news end--------------------------------------------------------------------------- */
 
@@ -149,7 +202,7 @@ header input {
     header {
         flex-direction: column;
     }
-    
+
     header>div:first-child {
         justify-content: space-between;
     }
